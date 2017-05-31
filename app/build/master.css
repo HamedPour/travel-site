@@ -171,7 +171,6 @@ a {
   padding: .75rem 1.2rem;
   display: inline-block;
 
-
 }
 .btn--orange{
     background-color: #d59541;
@@ -184,6 +183,11 @@ a {
 .btn--large{
       font-size: 1.3rem
   }
+  }
+.site-header--dark .btn {
+    -webkit-transition: background-color 3s ease-out;
+    transition: background-color 3s ease-out;
+    background-color: #d59541;
   }
 .wrapper {
   overflow: hidden;
@@ -647,10 +651,15 @@ Instead edit gulp/templates/sprite.css */
   }
 @media (min-width: 800px){
 .site-header {
+    position: fixed;
     background-color: rgba(47,85,114, 0.3)
 
 
 }
+
+    .site-header--dark {
+      background-color: rgba(23, 51, 72, .85);
+    }
   }
 @media (min-width: 800px){
 .site-header__btn-container {
@@ -663,6 +672,10 @@ Instead edit gulp/templates/sprite.css */
     left: 50%;
     -webkit-transform: translateX(-50%) scale(.8);
             transform: translateX(-50%) scale(.8);
+    -webkit-transition: -webkit-transform .4s ease-out;
+    transition: -webkit-transform .4s ease-out;
+    transition: transform .4s ease-out;
+    transition: transform .4s ease-out, -webkit-transform .4s ease-out;
     -webkit-transform-origin: 50% 0%;
             transform-origin: 50% 0%;
     background-color: #2f5572;
@@ -674,6 +687,11 @@ Instead edit gulp/templates/sprite.css */
       -webkit-transform: translateX(0);
               transform: translateX(0)
   }
+
+      .site-header--dark .site-header__logo {
+        -webkit-transform: scale(.57);
+                transform: scale(.57);
+      }
   }
 .site-header__logo__graphic {
     text-indent: -9999px;
@@ -832,6 +850,10 @@ Instead edit gulp/templates/sprite.css */
       background-color: transparent;
       font-size: 1rem
   }
+
+      .primary-nav a.is-current-link {
+        color: #fabb69;
+      }
   }
 .reveal-item {
   opacity: 0;

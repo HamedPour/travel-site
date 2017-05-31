@@ -18,5 +18,9 @@
     }
   }
 
+  .site-header--dark & {
+    transition: background-color 3s ease-out;
+    background-color: $mainOrange;
+  }
 
 }
