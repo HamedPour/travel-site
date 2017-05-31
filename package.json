@@ -25,6 +25,7 @@
     "postcss-nested": "^2.0.2",
     "postcss-normalize": "^2.0.0",
     "postcss-simple-vars": "^4.0.0",
+    "waypoints": "^4.0.1",
     "webpack": "^2.6.1"
   }
 }
