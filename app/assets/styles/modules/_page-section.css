@@ -14,8 +14,10 @@
     background-color: lightblue;
 
     @mixin atLarge{
-    background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
-    background-size: cover;
+      &.lazyloaded { /* Make sure you always put LOADED, NOT LOAD since its refering to a div and not an element*/
+        background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+        background-size: cover;
+      }
     }
   }
 
